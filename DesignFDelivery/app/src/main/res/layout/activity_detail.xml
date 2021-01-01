@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#00A3FF"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:gravity="center"
+        android:text="Theo dõi đơn hàng"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/detail_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/ic_arrow"
+        app:layout_constraintBottom_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="?actionBarSize"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
+
+            <ImageView
+                android:id="@+id/ic_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_bike"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:background="#99000000"
+                app:layout_constraintBottom_toBottomOf="@id/on2"
+                app:layout_constraintEnd_toEndOf="@id/on"
+                app:layout_constraintStart_toStartOf="@id/on"
+                app:layout_constraintTop_toBottomOf="@id/on" />
+
+            <ImageView
+                android:id="@+id/on"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_on"
+                app:layout_constraintEnd_toEndOf="@id/ic_status"
+                app:layout_constraintStart_toStartOf="@id/ic_status"
+                app:layout_constraintTop_toBottomOf="@id/ic_status" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_on2"
+                app:layout_constraintEnd_toEndOf="@id/ic_status"
+                app:layout_constraintStart_toStartOf="@id/ic_status"
+                app:layout_constraintTop_toTopOf="@id/ln2" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_on3"
+                app:layout_constraintEnd_toEndOf="@id/ic_status"
+                app:layout_constraintStart_toStartOf="@id/ic_status"
+                app:layout_constraintTop_toTopOf="@id/ln3" />
+
+            <ImageView
+                android:id="@+id/on2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_on4"
+                app:layout_constraintEnd_toEndOf="@id/ic_status"
+                app:layout_constraintStart_toStartOf="@id/ic_status"
+                app:layout_constraintTop_toTopOf="@id/ln4" />
+
+
+            <View
+                android:id="@+id/space2"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="20dp"
+                android:background="#eaeaea"
+                app:layout_constraintTop_toBottomOf="@id/ln4" />
+
+            <LinearLayout
+                android:id="@+id/ln1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toEndOf="@id/on"
+                app:layout_constraintTop_toTopOf="@id/on">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/medium"
+                    android:text="Đang vận chuyển"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="11:44, Thứ 3 27/11/2020"
+                    android:textColor="#404040" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Quận 2, TP.HCM"
+                    android:textColor="#404040" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ln2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toEndOf="@id/on"
+                app:layout_constraintTop_toBottomOf="@id/ln1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/medium"
+                    android:text="Đóng gói"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="16:44, Thứ 2 26/10/2020"
+                    android:textColor="#404040" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Trung tâm khai thác 3, TP.HCM"
+                    android:textColor="#404040" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ln3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16sp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toEndOf="@id/on"
+                app:layout_constraintTop_toBottomOf="@id/ln2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/medium"
+                    android:text="Đang lấy hàng"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="8:44, Chủ Nhật 25/10/2020"
+                    android:textColor="#404040" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Kho 1, Quận 2, TP.HCM"
+                    android:textColor="#404040" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ln4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toEndOf="@id/on"
+                app:layout_constraintTop_toBottomOf="@id/ln3">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/medium"
+                    android:text="Tiếp nhận"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="11:44, Thứ 6 23/10/2020"
+                    android:textColor="#404040" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Kho D2, Quận 11, TP.HCM"
+                    android:textColor="#404040" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lb_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:text="Đang vận chuyển"
+                android:textColor="#008DDD"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="@id/ic_status"
+                app:layout_constraintStart_toEndOf="@id/ic_status"
+                app:layout_constraintTop_toTopOf="@id/ic_status" />
+
+
+            <ImageView
+                android:id="@+id/ic_nguoinhan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/ic_box_detail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/space2" />
+
+            <TextView
+                android:id="@+id/lb_thongtin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:text="Thông tin đơn hàng"
+                android:textColor="#008DDD"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="@id/ic_nguoinhan"
+                app:layout_constraintStart_toEndOf="@id/ic_nguoinhan"
+                app:layout_constraintTop_toTopOf="@id/ic_nguoinhan" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/medium"
+                android:text="Xem chi tiết"
+                android:textColor="#008DDD"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@id/lb_thongtin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/lb_thongtin" />
+
+            <LinearLayout
+                android:id="@+id/ln_nguoinhan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/lb_thongtin"
+                app:layout_constraintTop_toBottomOf="@id/lb_thongtin">
+
+                <LinearLayout
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="2dp"
+                        android:text="Mã đơn hàng:"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="2dp"
+                        android:text="Tổng giá:"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="2dp"
+                        android:text="Địa điểm:"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="2dp"
+                        android:text="SHL001"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bold"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="2dp"
+                        android:text="500.000 VNĐ"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="2dp"
+                        android:text="121A Linh Đông, quận 5, TP.HCM"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/space3"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="16dp"
+                android:background="#eaeaea"
+                app:layout_constraintTop_toBottomOf="@id/ln_nguoinhan" />
+
+            <ImageView
+                android:id="@+id/ic_contomer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/ic_user"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/space3" />
+
+            <TextView
+                android:id="@+id/lb_customer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:text="Thông tin liên lạc"
+                android:textColor="#008DDD"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="@id/ic_contomer"
+                app:layout_constraintStart_toEndOf="@id/ic_contomer"
+                app:layout_constraintTop_toTopOf="@id/ic_contomer" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/medium"
+                android:text="Xem chi tiết"
+                android:textColor="#008DDD"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@id/lb_customer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/lb_customer" />
+
+            <LinearLayout
+                android:id="@+id/ln_customer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/lb_customer"
+                app:layout_constraintTop_toBottomOf="@id/lb_customer">
+
+                <LinearLayout
+
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="2dp"
+                        android:text="Người giao:"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="2dp"
+                        android:text="SĐT:"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="2dp"
+                        android:text="Phan Anh Tú"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bold"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="2dp"
+                        android:text="03003010101"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
