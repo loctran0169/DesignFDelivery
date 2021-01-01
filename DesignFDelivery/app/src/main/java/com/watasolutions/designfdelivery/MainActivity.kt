@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var tabLayout: TabLayout
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.order_activity)
+        setContentView(R.layout.activity_main)
         val listTab = listOf<String>("Tất cả", "Chờ giao hàng", "Chờ nhận hàng", "Đang giao", "Hoàn tất")
         tabLayout = findViewById<TabLayout>(R.id.tabhost)
         listTab.forEach {

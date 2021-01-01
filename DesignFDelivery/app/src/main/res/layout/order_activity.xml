@@ -126,10 +126,19 @@
                     android:layout_marginTop="16dp"
                     android:drawableStart="@drawable/ic_box"
                     android:drawablePadding="8dp"
-                    android:text="1x Macbook Air 2020"
+                    android:text="1x Macbook Air 2020  -  "
                     android:textColor="@android:color/black"
                     app:layout_constraintStart_toStartOf="@id/tvMaSp"
                     app:layout_constraintTop_toBottomOf="@id/tvMaSp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Xem thêm(2)"
+                    android:textColor="#008DDD"
+                    app:layout_constraintBottom_toBottomOf="@id/tvName"
+                    app:layout_constraintStart_toEndOf="@id/tvName"
+                    app:layout_constraintTop_toTopOf="@id/tvName" />
 
                 <TextView
                     android:id="@+id/tvNameCustomer"
@@ -214,12 +223,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:background="@drawable/bg_tag_danggiao"
+                    android:background="@drawable/bg_tag_dahuy"
                     android:fontFamily="@font/regular"
                     android:padding="4dp"
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
-                    android:text="Đang giao"
+                    android:text="Đã hủy"
                     android:textColor="@android:color/white"
                     android:textSize="13sp"
                     app:layout_constraintBottom_toBottomOf="@id/tvMaSp2"
@@ -330,12 +339,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:background="@drawable/bg_tag_danggiao"
+                    android:background="@drawable/bg_tag_hoantat"
                     android:fontFamily="@font/regular"
                     android:padding="4dp"
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
-                    android:text="Đang giao"
+                    android:text="Hoàn tất"
                     android:textColor="@android:color/white"
                     android:textSize="13sp"
                     app:layout_constraintBottom_toBottomOf="@id/tvMaSp3"
@@ -358,10 +367,19 @@
                     android:layout_marginTop="16dp"
                     android:drawableStart="@drawable/ic_box"
                     android:drawablePadding="8dp"
-                    android:text="1x Macbook Air 2020"
+                    android:text="1x Macbook Air 2020  -  "
                     android:textColor="@android:color/black"
                     app:layout_constraintStart_toStartOf="@id/tvMaSp3"
                     app:layout_constraintTop_toBottomOf="@id/tvMaSp3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Xem thêm(2)"
+                    android:textColor="#008DDD"
+                    app:layout_constraintBottom_toBottomOf="@id/tvName3"
+                    app:layout_constraintStart_toEndOf="@id/tvName3"
+                    app:layout_constraintTop_toTopOf="@id/tvName3" />
 
                 <TextView
                     android:id="@+id/tvNameCustomer3"
