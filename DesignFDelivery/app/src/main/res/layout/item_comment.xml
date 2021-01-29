@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/avatar"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/loc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Hữu Lộc"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/avatar"
+        app:layout_constraintStart_toEndOf="@id/avatar"
+        app:layout_constraintTop_toTopOf="@id/avatar" />
+
+    <LinearLayout
+        android:id="@+id/rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/avatar"
+        app:layout_constraintTop_toBottomOf="@id/avatar">
+
+        <ImageButton
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:background="@drawable/ic_star_full_small" />
+
+        <ImageButton
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:background="@drawable/ic_star_full_small" />
+
+        <ImageButton
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:background="@drawable/ic_star_full_small" />
+
+        <ImageButton
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:background="@drawable/ic_star_full_small" />
+
+        <ImageButton
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:background="@drawable/ic_star_not_full_small" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="25/09/2020"
+        app:layout_constraintBottom_toBottomOf="@id/rate"
+        app:layout_constraintStart_toEndOf="@id/rate"
+        app:layout_constraintTop_toTopOf="@id/rate" />
+
+    <TextView
+        android:id="@+id/comment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="Giao hàng nhanh chóng, thái độ nhân viên phục vụ làm tôi cảm thấy dịch vụ rất  chuyên nghiệp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rate" />
+
+    <TextView
+        android:id="@+id/no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_yes_no"
+        android:backgroundTint="#4D34DB63"
+        android:paddingStart="10dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="4dp"
+        android:text="Không"
+        android:textColor="#15672C"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/comment" />
+
+    <TextView
+        android:id="@+id/yes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/bg_yes_no"
+        android:paddingStart="10dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="4dp"
+        android:text="Có"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/no"
+        app:layout_constraintEnd_toStartOf="@id/no"
+        app:layout_constraintTop_toTopOf="@id/no" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:text="Đánh giá này có hữu ích?"
+        app:layout_constraintBottom_toBottomOf="@id/yes"
+        app:layout_constraintEnd_toStartOf="@id/yes"
+        app:layout_constraintTop_toTopOf="@id/yes" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

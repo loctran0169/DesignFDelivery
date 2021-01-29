@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
@@ -281,7 +282,7 @@
                 android:id="@+id/lbRank"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="24dp"
                 android:layout_marginTop="24dp"
                 android:text="Xếp hạng và đánh giá"
                 android:textColor="@android:color/black"
@@ -290,6 +291,7 @@
                 app:layout_constraintTop_toBottomOf="@id/more" />
 
             <ImageView
+                android:id="@+id/btnComment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
@@ -297,6 +299,269 @@
                 app:layout_constraintBottom_toBottomOf="@id/lbRank"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/lbRank" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/consume"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/bg_rank"
+                app:layout_constraintTop_toBottomOf="@id/lbRank">
+
+                <TextView
+                    android:id="@+id/rank4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="4"
+                    android:textColor="#000"
+                    android:textSize="60sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/rank5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="/5"
+                    android:textColor="#636262"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@id/rank4"
+                    app:layout_constraintStart_toEndOf="@id/rank4" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="30dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/rank5"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center|end"
+                            android:paddingEnd="24dp"
+                            android:text="Nhanh chóng"
+                            android:textSize="16sp" />
+
+                        <ImageButton
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:background="@drawable/ic_star_full" />
+
+                        <ImageButton
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:background="@drawable/ic_star_full" />
+
+                        <ImageButton
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:background="@drawable/ic_star_full" />
+
+                        <ImageButton
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:background="@drawable/ic_star_full" />
+
+                        <ImageButton
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:background="@drawable/ic_star_not_full" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center|end"
+                            android:paddingEnd="24dp"
+                            android:text="Chất lượng"
+                            android:textSize="16sp" />
+
+                        <ImageButton
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:background="@drawable/ic_star_full" />
+
+                        <ImageButton
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:background="@drawable/ic_star_full" />
+
+                        <ImageButton
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:background="@drawable/ic_star_full" />
+
+                        <ImageButton
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:background="@drawable/ic_star_full" />
+
+                        <ImageButton
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:background="@drawable/ic_star_not_full" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center|end"
+                            android:paddingEnd="24dp"
+                            android:text="Thái độ"
+                            android:textSize="16sp" />
+
+                        <ImageButton
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:background="@drawable/ic_star_full" />
+
+                        <ImageButton
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:background="@drawable/ic_star_full" />
+
+                        <ImageButton
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:background="@drawable/ic_star_full" />
+
+                        <ImageButton
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:background="@drawable/ic_star_full" />
+
+                        <ImageButton
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:background="@drawable/ic_star_not_full" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/lbCommentYou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:text="Cảm nghỉ của bạn"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/consume" />
+
+            <TextView
+                android:id="@+id/comment1"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/bg_comment"
+                android:gravity="center"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="Giao hàng nhanh chóng"
+                android:textColor="#00A3FF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lbCommentYou" />
+
+            <TextView
+                android:id="@+id/comment2"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/bg_comment"
+                android:gravity="center"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="Tốt!"
+                android:textColor="#00A3FF"
+                app:layout_constraintStart_toEndOf="@id/comment1"
+                app:layout_constraintTop_toBottomOf="@id/lbCommentYou" />
+
+            <EditText
+                android:id="@+id/edittext"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/bg_comment_edittext"
+                android:hint="Viết cảm nghỉ của bạn"
+                android:padding="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/comment1" />
+
+            <Button
+                android:id="@+id/btnSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="#9900A3FF"
+                android:text="Đăng"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@id/edittext"
+                app:layout_constraintTop_toBottomOf="@id/edittext" />
+
+            <TextView
+                android:id="@+id/lbComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:text="Nhận xét"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnSend" />
+
+            <TextView
+                android:id="@+id/comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Xem thêm tất cả (2143)"
+                android:textColor="#104968"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@id/lbComment"
+                app:layout_constraintStart_toEndOf="@id/lbComment"
+                app:layout_constraintTop_toTopOf="@id/lbComment" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvVote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/lbComment"
+                tools:listitem="@layout/item_comment" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
