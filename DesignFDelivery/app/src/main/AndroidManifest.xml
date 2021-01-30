@@ -11,7 +11,10 @@
         android:theme="@style/Theme.DesignFDelivery">
 
         <activity android:name=".MainActivity">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <activity android:name=".DetailActivity">
@@ -19,13 +22,16 @@
         </activity>
 
         <activity android:name=".VoteActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".CommentActivity" />
-        <activity android:name=".VoteAllActivity" />
-    </application>
 
+        </activity>
+
+        <activity android:name=".CommentActivity" />
+
+        <activity android:name=".VoteAllActivity" />
+
+        <activity android:name=".ListChatActivity">
+
+        </activity>
+        <activity android:name=".ChattingActivity" />
+    </application>
 </manifest>

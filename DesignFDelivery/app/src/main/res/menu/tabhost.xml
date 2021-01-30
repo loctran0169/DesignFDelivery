@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="a"/>
-    <item android:title="a"/>
-    <item android:title="a"/>
-    <item android:title="a"/>
-    <item android:title="a"/>
+    <item
+        android:icon="@drawable/ic_home"
+        android:title="Trang chủ" />
+    <item
+        android:id="@+id/order"
+        android:icon="@drawable/ic_box"
+        android:title="Đơn hàng" />
+    <item
+        android:id="@+id/chat"
+        android:icon="@drawable/ic_chat"
+        android:title="Trò chuyện" />
+    <item
+        android:icon="@drawable/ic_menu"
+        android:title="Menu" />
 </menu>
