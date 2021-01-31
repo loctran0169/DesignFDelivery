@@ -2,6 +2,7 @@ package com.watasolutions.designfdelivery
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -24,6 +25,10 @@ class VoteActivity : AppCompatActivity() {
 
         findViewById<TextView>(R.id.comment).setOnClickListener {
             startActivity(Intent(this, VoteAllActivity::class.java))
+        }
+
+        findViewById<ImageButton>(R.id.back).setOnClickListener {
+            onBackPressed()
         }
     }
 }

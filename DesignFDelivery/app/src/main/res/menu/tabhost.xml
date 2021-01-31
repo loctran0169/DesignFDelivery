@@ -12,6 +12,7 @@
         android:icon="@drawable/ic_chat"
         android:title="Trò chuyện" />
     <item
+        android:id="@+id/menu"
         android:icon="@drawable/ic_menu"
         android:title="Menu" />
 </menu>
